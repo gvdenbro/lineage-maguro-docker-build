@@ -39,7 +39,7 @@ repo sync 2>&1 >&$DEBUG_LOG
 if [ "$CLEAN_OUTDIR" = true ]; then
     echo ">> [$(date)] Cleaning '$ZIP_DIR'" >> $DOCKER_LOG
     cd $ZIP_DIR
-    rm *
+    rm -rf *.zip
     cd $SRC_DIR
 fi
 
