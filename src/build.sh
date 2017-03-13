@@ -62,7 +62,7 @@ if ! [ -z "$DEVICE_LIST" ]; then
       # Start the build
       echo ">> [$(date)] Starting breakfast build for $codename" >> $DOCKER_LOG
       if breakfast $codename 2>&1 >&$DEBUG_LOG; then
-        echo ">> [$(date)] finished breafast for $codename to '$ZIP_DIR'" >> $DOCKER_LOG
+        echo ">> [$(date)] finished breafast for $codename" >> $DOCKER_LOG
         cd $SRC_DIR
       else
         echo ">> [$(date)] Failed build for $codename" >> $DOCKER_LOG
